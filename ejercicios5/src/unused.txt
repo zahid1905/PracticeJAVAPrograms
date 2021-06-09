@@ -1,0 +1,18 @@
+if (nextTorre != pieza[0]){
+                for (int nextPieza = 0; nextPieza <= 3; nextPieza++){
+                    if (torres[nextTorre][nextPieza] == 0){
+                        if (nextPieza == 0) {
+                            pieza2 = pieza;
+                            break;
+                        }
+                        if (torres[pieza[0]][pieza[1]] < torres[nextTorre][nextPieza - 1]){                            
+                            pieza2 = pieza;
+                            break;
+                        }
+                        if (torres[pieza[0]][pieza[1]] > torres[nextTorre][nextPieza - 1]){
+                            pieza2 = selectPieza(torres, torres[pieza[0]][pieza[1]]);
+                            break;
+                        }
+                    }
+                }
+            }
